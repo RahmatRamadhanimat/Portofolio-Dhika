@@ -60,3 +60,19 @@ Persentase skill adalah penilaian pribadi: HTML & CSS 85%, JavaScript 70%, Pytho
 ## Pemeriksaan paket
 
 Sintaks JavaScript dan semua rujukan aset lokal diperiksa. Contoh Python dijalankan dengan input nilai sederhana. CV PDF dirender dan diperiksa secara visual. Pengujian browser otomatis belum berhasil dilakukan karena browser tidak tersedia dan pengunduhannya gagal; tampilan serta interaksi perlu diperiksa kembali setelah di-host. Contoh Java belum dikompilasi karena JDK tidak tersedia di lingkungan pembuatan.
+
+## Halaman prestasi (tambahan)
+
+Tombol **Lihat Prestasi Saya Di sini ya** terletak tepat setelah kartu proyek dan membuka `prestasi.html`. Halaman menggunakan `style.css` yang sama, termasuk dark/light mode dan preferensi tema tersimpan. Klik gambar untuk memperbesar; tekan Escape atau tombol tutup untuk kembali.
+
+### Menambahkan gambar
+
+1. Masukkan gambar ke folder **asset** (tanpa s).
+2. Beri nama `prestasi1.png`, `prestasi2.jpg`, `prestasi3.jpeg`, dan seterusnya. PNG/JPG/JPEG boleh dicampur. Gunakan huruf kecil dan nomor tanpa nol di depan.
+3. Upload folder beserta gambar ke GitHub, kemudian tunggu deploy selesai dan muat ulang halaman prestasi.
+
+Tidak perlu mengedit HTML. Secara default, halaman memeriksa nomor **1–100**. Nomor yang tidak tersedia dilewati; gambar diurutkan berdasarkan nomor. Untuk nomor di atas 100, ubah `window.PORTFOLIO_CONFIG.prestasiMax` di `config.js`. Hindari angka terlalu besar agar tidak terlalu banyak permintaan gambar. Untuk satu nomor dengan beberapa format, PNG didahulukan, lalu JPG, lalu JPEG. File rusak/tidak ditemukan tidak ditampilkan. Pada koneksi lambat, muat ulang bila gambar gagal dimuat.
+
+Folder **assets** yang sudah ada tetap berisi CV dan favicon. Folder baru **asset** khusus gambar prestasi. Belum ada gambar prestasi asli yang diberikan, sehingga paket menampilkan keadaan kosong yang rapi sampai gambar ditambahkan. Jangan mengubah ekstensi file saja; pastikan berkas benar-benar gambar PNG/JPG/JPEG.
+
+Pembaruan prestasi: pemeriksaan sintaks, rujukan file, posisi tombol, serta simulasi logika galeri lulus (format campuran, nomor terlewat, urutan, prioritas PNG, pembesaran/tutup, dan kondisi kosong). Pemeriksaan ini bukan pengujian visual di browser.
