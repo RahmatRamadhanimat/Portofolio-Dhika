@@ -1,6 +1,16 @@
-# Portofolio Dhika Frisco Dwi Pratama
+# Portofolio Dhika Frisco Dwi Pratama — Desa Pegunungan
 
 Website statis HTML, CSS, dan JavaScript. Tidak membutuhkan npm, build, database, atau framework. Buka `index.html` untuk mencoba secara lokal. Semua aset utama tersedia offline.
+
+## Tema desa pegunungan
+
+Halaman utama, halaman prestasi, demo tugas, favicon, dan CV memakai palet hijau hutan, warna daun, serta aksen keemasan. Hero menggunakan ilustrasi asli desa pegunungan, sawah terasering, dan kabut. Default adalah suasana pagi; tombol bulan/matahari mengganti suasana malam/pagi dan mengingat pilihan.
+
+Animasi meliputi burung terbang dengan gerak kepakan, kabut/awan tipis, cahaya yang bergerak halus, partikel melayang, kartu profil mengambang, muncul saat scroll, skill bars, dan hover kartu. Gerakan parallax ringan aktif pada perangkat berkursor; tidak mengambil alih scroll pada HP.
+
+Tombol **Ⅱ / ▷** di header menjeda/memutar animasi. Pilihan tersimpan. Pengaturan **kurangi gerakan** perangkat otomatis menghentikan animasi. Animasi dekoratif berhenti saat tab tersembunyi atau pemandangan berada di luar layar. Tidak ada audio otomatis.
+
+File tambahan: `nature.js`, `assets/desa-pegunungan.png`, `assets/burung.png`, dan `assets/ARTWORK.md`. Aset gambar adalah ilustrasi, bukan foto pribadi atau dokumentasi lokasi tertentu. Semua gambar disertakan dalam ZIP.
 
 ## Upload dan deploy
 
@@ -76,3 +86,7 @@ Tidak perlu mengedit HTML. Secara default, halaman memeriksa nomor **1–100**. 
 Folder **assets** yang sudah ada tetap berisi CV dan favicon. Folder baru **asset** khusus gambar prestasi. Belum ada gambar prestasi asli yang diberikan, sehingga paket menampilkan keadaan kosong yang rapi sampai gambar ditambahkan. Jangan mengubah ekstensi file saja; pastikan berkas benar-benar gambar PNG/JPG/JPEG.
 
 Pembaruan prestasi: pemeriksaan sintaks, rujukan file, posisi tombol, serta simulasi logika galeri lulus (format campuran, nomor terlewat, urutan, prioritas PNG, pembesaran/tutup, dan kondisi kosong). Pemeriksaan ini bukan pengujian visual di browser.
+
+## Pemeriksaan tema pegunungan
+
+Struktur HTML, rujukan aset, dan sintaks JavaScript diperiksa. Simulasi logika menguji tema pagi/malam, pilihan tersimpan, jeda, reduced motion, tab tersembunyi, penyimpanan browser yang diblokir, dan galeri prestasi. Lanskap, siluet burung, dan CV diperiksa secara visual. Browser pengujian tidak tersedia, sehingga tampilan serta animasi belum diverifikasi langsung di browser.

@@ -1,15 +1,6 @@
 (() => {
 'use strict';
 const $ = s => document.querySelector(s);
-const themeButton = $('#theme-toggle');
-function setTheme(theme) {
- document.documentElement.dataset.theme = theme;
- themeButton.textContent = theme === 'dark' ? '☀' : '☾';
- themeButton.setAttribute('aria-label', theme === 'dark' ? 'Aktifkan mode terang' : 'Aktifkan mode gelap');
- themeButton.setAttribute('aria-pressed', String(theme === 'light'));
-}
-try { setTheme(localStorage.getItem('dhika-theme') === 'light' ? 'light' : 'dark'); } catch { setTheme('dark'); }
-themeButton.addEventListener('click', () => { const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; setTheme(theme); try { localStorage.setItem('dhika-theme', theme); } catch {} });
 const menu = $('#menu-toggle'), nav = $('#navigation');
 function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Buka menu');}
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Tutup menu':'Buka menu');});

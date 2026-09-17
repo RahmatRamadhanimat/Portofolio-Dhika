@@ -1,17 +1,5 @@
 (() => {
 'use strict';
-const themeButton = document.querySelector('#theme-toggle');
-function setTheme(theme) {
- document.documentElement.dataset.theme = theme;
- themeButton.textContent = theme === 'dark' ? '☀' : '☾';
- themeButton.setAttribute('aria-label', theme === 'dark' ? 'Aktifkan mode terang' : 'Aktifkan mode gelap');
- themeButton.setAttribute('aria-pressed', String(theme === 'light'));
-}
-try { setTheme(localStorage.getItem('dhika-theme') === 'light' ? 'light' : 'dark'); } catch { setTheme('dark'); }
-themeButton.addEventListener('click', () => {
- const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
- setTheme(theme); try { localStorage.setItem('dhika-theme', theme); } catch {}
-});
 document.querySelector('#year').textContent = new Date().getFullYear();
 const grid = document.querySelector('#achievement-grid');
 const status = document.querySelector('#achievement-status');
