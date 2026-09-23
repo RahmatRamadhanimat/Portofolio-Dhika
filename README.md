@@ -21,9 +21,14 @@ File tambahan: `nature.js`, `assets/desa-pegunungan.png`, `assets/burung.png`, d
 
 Panduan ini bukan konfirmasi bahwa website sudah dipublikasikan. Paket ini siap diunggah dan di-host.
 
-## Mengaktifkan kontak email / WhatsApp
+## Mengatur foto profil & kontak (email / WhatsApp)
 
-Edit `config.js` dan isi email milik Dhika dan/atau nomor WhatsApp milik Dhika dalam format internasional (62..., hanya angka). Biarkan kosong bila tidak dipakai. Email dan nomor belum diberikan, sehingga tidak diisi sembarang alamat.
+Edit `config.js`:
+- `imageUrl`: Isi dengan link URL gambar (misal: `https://example.com/foto.jpg`) untuk menampilkan foto profil pada kartu hero. Jika dikosongkan, tampilan default berupa monogram DF.
+- `email`: Email milik Dhika dalam format nama@domain.com.
+- `whatsapp`: Nomor WhatsApp dalam format internasional (62..., hanya angka).
+
+Biarkan kosong bila tidak dipakai. Email dan nomor belum diberikan, sehingga tidak diisi sembarang alamat.
 
 Setelah konfigurasi valid, pilihan Email / WhatsApp muncul otomatis. WhatsApp membuka draf ke nomor tujuan. Email memakai aplikasi email pengunjung (mailto). Pengunjung tetap harus menekan kirim di aplikasi tersebut; website tidak mengirim otomatis dan tidak menyimpan pesan. Tanpa konfigurasi, pengunjung dapat menyalin pesan untuk dikirim melalui Instagram. Jika clipboard tidak tersedia, teks ditampilkan agar dapat disalin manual.
 

@@ -31,6 +31,19 @@ $('#close-dialog').addEventListener('click',()=>dialog.close());
 $('#dialog-link').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
 const config=window.PORTFOLIO_CONFIG||{}, channel=$('#channel');
+if(typeof config.imageUrl==='string'&&config.imageUrl.trim()!==''){
+ const seal=$('.profile-seal');
+ if(seal){
+  const originalText=seal.textContent;
+  const img=document.createElement('img');
+  img.src=config.imageUrl.trim();
+  img.alt='Foto Profil Dhika Frisco';
+  img.className='profile-avatar';
+  img.onerror=()=>{seal.innerHTML='';seal.textContent=originalText;};
+  seal.innerHTML='';
+  seal.appendChild(img);
+ }
+}
 const validEmail=typeof config.email==='string'&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.email.trim());
 const validWhatsApp=typeof config.whatsapp==='string'&&/^[1-9]\d{7,14}$/.test(config.whatsapp);
 if(validEmail)channel.add(new Option('Email','email'));

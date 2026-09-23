@@ -2,7 +2,8 @@
 // Jangan menaruh password, token, atau API key di file publik ini.
 window.PORTFOLIO_CONFIG = {
   email: "", // Email milik Dhika, contoh format: nama@domain.com
-  whatsapp: "" // Nomor milik Dhika: format internasional, angka saja (62..., tanpa +)
+  whatsapp: "", // Nomor milik Dhika: format internasional, angka saja (62..., tanpa +)
+  imageUrl: "" // Link URL foto profil (gambar dari web/URL luar, contoh: https://example.com/foto.jpg)
 };
 
 // Prestasi otomatis: cek asset/prestasi1 sampai asset/prestasi100.
