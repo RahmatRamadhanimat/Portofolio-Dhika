@@ -32,12 +32,18 @@ $('#dialog-link').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
 const config=window.PORTFOLIO_CONFIG||{}, channel=$('#channel');
 if(typeof config.imageUrl==='string'&&config.imageUrl.trim()!==''){
- const seal=$('.profile-seal');
+ const url=config.imageUrl.trim();
+ const cardImg=$('#profile-card-img');
+ if(cardImg){
+  cardImg.src=url;
+  cardImg.onerror=()=>{cardImg.style.display='none';};
+ }
+ const seal=$('#profile-seal');
  if(seal){
   const originalText=seal.textContent;
   const img=document.createElement('img');
-  img.src=config.imageUrl.trim();
-  img.alt='Foto Profil Dhika Frisco';
+  img.src=url;
+  img.alt='Monogram DF';
   img.className='profile-avatar';
   img.onerror=()=>{seal.innerHTML='';seal.textContent=originalText;};
   seal.innerHTML='';
